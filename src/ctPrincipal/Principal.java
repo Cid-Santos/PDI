@@ -706,8 +706,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnGoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoActionPerformed
-        if (buffImageA != null && buffImageB != null) {
-            Operacoes _operacoes = new Operacoes(buffImageA, buffImageB);
+        int not = cbOperacao.getSelectedIndex();
+        Operacoes _operacoes;
+        if (buffImageA != null && (buffImageB != null || not == 3)) {
+
+            if (not != 3) {
+                _operacoes = new Operacoes(buffImageA, buffImageB);
+            } else {
+                _operacoes = new Operacoes(buffImageA, buffImageA);
+            }
             int action = cbOperacao.getSelectedIndex();
             String buffOutput = _operacoes.realizarOperacoes(action + 1);
             jLImgC.setIcon(new ImageIcon(buffOutput));
@@ -829,7 +836,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-         if (buffImageA != null && buffImageB != null) {
+        if (buffImageA != null && buffImageB != null) {
             Operacoes _operacoes = new Operacoes(buffImageA, buffImageB);
             String buffOutput = _operacoes.realizarOperacoes(6);
             jLImgC.setIcon(new ImageIcon(buffOutput));

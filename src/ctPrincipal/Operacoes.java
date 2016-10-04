@@ -104,9 +104,7 @@ public final class Operacoes {
                 resultImgOutput = "OutputImg/xor.jpg";
                 break;
             case 4://not
-                imagemBinaria();
-                Core.bitwise_not(image2bin, output);
-                normalizarBinario();
+                Core.bitwise_not(image1bin, output);
                 Imgcodecs.imwrite("OutputImg/not.jpg", output);
                 resultImgOutput = "OutputImg/not.jpg";
                 break;
