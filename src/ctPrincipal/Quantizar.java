@@ -20,7 +20,7 @@ public class Quantizar {
 
     private int quantizacao;//Quantidade de tons que ira representar
 
-    private boolean flagEscalaCinza;//flag que indica se a imagem em manipula??o atual ? a RGB ou a em escala de cinza
+    private boolean flagEscalaCinza;//flag que indica se a imagem em manipulacao atual em  RGB ou a em escala de cinza
 
     public Quantizar() {
         this.init();
@@ -30,6 +30,7 @@ public class Quantizar {
         return biOriginal;
     }
 
+    
     public void setBiOriginal(BufferedImage biOriginal) {
         this.biOriginal = biOriginal;
     }

@@ -116,4 +116,12 @@ public class Filtros {
         return "OutputImg/minimo.jpg";
     }
 
+    public String Contraste() {
+        /// Converte para escala cinza
+        Imgproc.cvtColor(image, image, Imgproc.COLOR_RGB2GRAY);
+        /// Aplica equalizacao de histograma.
+        Imgproc.equalizeHist(image, output);
+        Imgcodecs.imwrite("OutputImg/contraste.jpg", output);
+        return "OutputImg/contraste.jpg";
+    }
 }

@@ -15,20 +15,20 @@ import java.awt.image.Raster;
 public class Psnr {
 
     // número de bits usados para armazenar a mantissa na norma IEEE-754 de 64 bits
-    public static final int DOUBLE_MANTISSA_BITS = 52;
+    public  final int DOUBLE_MANTISSA_BITS = 52;
     // número de bits usados para armazenar a mantissa na norma IEEE-754 de 32 bits
-    public static final int FLOAT_MANTISSA_BITS = 23;
+    public  final int FLOAT_MANTISSA_BITS = 23;
 
-    public static final byte POSITIVE = 0;
-    public static final byte NEGATIVE = 1;
+    public  final byte POSITIVE = 0;
+    public  final byte NEGATIVE = 1;
 
-    public static final int BLACK = 0;
-    public static final int WHITE = 1;
+    public  final int BLACK = 0;
+    public  final int WHITE = 1;
 
-    public static final int INSIGNIFICANT = 0;
-    public static final int SIGNIFICANT = 1;
+    public  final int INSIGNIFICANT = 0;
+    public  final int SIGNIFICANT = 1;
 
-    public static long unsigned(long l) {
+    public long unsigned(long l) {
         long x = l;
         x <<= 32;
         x >>>= 32;
@@ -42,7 +42,7 @@ public class Psnr {
      * @param im2
      * @return
      */
-    public static double printPSNR(BufferedImage im1, BufferedImage im2) {
+    public double printPSNR(BufferedImage im1, BufferedImage im2) {
         assert (im1.getType() == im2.getType()
                 && im1.getHeight() == im2.getHeight()
                 && im1.getWidth() == im2.getWidth());
@@ -73,7 +73,7 @@ public class Psnr {
      * @param x
      * @return
      */
-    public static double logbase10(double x) {
+    public  double logbase10(double x) {
         return Math.log(x) / Math.log(10);
     }
 }
