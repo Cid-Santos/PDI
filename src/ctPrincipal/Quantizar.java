@@ -7,6 +7,7 @@ package ctPrincipal;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
+import org.opencv.core.Mat;
 
 /**
  *
@@ -21,6 +22,8 @@ public class Quantizar {
     private int quantizacao;//Quantidade de tons que ira representar
 
     private boolean flagEscalaCinza;//flag que indica se a imagem em manipulacao atual em  RGB ou a em escala de cinza
+    
+    Mat output;
 
     public Quantizar() {
         this.init();

@@ -59,11 +59,11 @@ public class Psnr {
             }
         }
         mse /= (double) (width * height);
-        System.err.println("MSE = " + mse);
+       // System.err.println("MSE = " + mse);
         int maxVal = 255;
         double x = Math.pow(maxVal, 2) / mse;
         double psnr = 10.0 * logbase10(x);
-        System.err.println("PSNR = " + psnr);
+      //  System.err.println("PSNR = " + psnr);
         return psnr;
     }
 
